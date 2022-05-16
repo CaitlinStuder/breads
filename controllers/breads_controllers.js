@@ -4,8 +4,15 @@ const breads = express.Router()
 
 // INDEX
 breads.get('/', (req, res) => {
-  res.send(bread)
+  res.render('Index',
+    {
+      breads: bread,
+      title: 'Index Page'
+    }
+  )
+// res.send(bread)
 })
+
 
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
